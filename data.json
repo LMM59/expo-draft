@@ -1,5 +1,6 @@
 [
   {
+    "id": "obra-001",
     "titulo": "Sem título",
     "autor": "Ramon Cotrim",
     "cidade": "Rio de Janeiro, Brasil",
@@ -10,13 +11,14 @@
     "descricao": "Audiodescrição exemplo"
   },
   {
-    "titulo": "Teste",
-    "autor": "Felipe Cotrim",
-    "cidade": "Rio de Janeiro, Brasil",
+    "id": "obra-002",
+    "titulo": "Luz sobre Itacoatiara",
+    "autor": "Luciano Machado",
+    "cidade": "Niterói, Brasil",
     "ano": "2026",
     "tamanho": "40x60 cm",
-    "impressao": "Impressão em papel algodão",
-    "audio": "https://exemplo.com/audio-itacoatiara.mp3",
-    "descricao": "Fotografia da praia ao entardecer, com luz suave incidindo sobre as montanhas e o mar."
+    "impressao": "Papel algodão",
+    "audio": "https://exemplo.com/audio2.mp3",
+    "descricao": "Cena ao entardecer."
   }
 ]
