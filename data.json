@@ -1,0 +1,12 @@
+[
+  {
+    "titulo": "Sem título",
+    "autor": "Ramon Cotrim",
+    "cidade": "Rio de Janeiro, Brasil",
+    "ano": "2025",
+    "tamanho": "30x40 cm",
+    "impressao": "Fine art",
+    "audio": "https://link-do-audio.mp3",
+    "descricao": "Audiodescrição aqui"
+  }
+]
