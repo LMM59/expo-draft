@@ -1,24 +1,26 @@
 [
   {
     "id": "obra-001",
-    "titulo": "Sem título",
+    "titulo": "Luz do Entardecer",
     "autor": "Ramon Cotrim",
     "cidade": "Rio de Janeiro, Brasil",
     "ano": "2025",
     "tamanho": "30x40 cm",
     "impressao": "Fine art",
     "audio": "https://www.w3schools.com/html/horse.mp3",
-    "descricao": "Audiodescrição exemplo"
+    "descricao": "Fotografia com luz suave no final da tarde.",
+    "imagem": "https://images.unsplash.com/photo-1501785888041-af3ef285b470"
   },
   {
     "id": "obra-002",
-    "titulo": "Luz sobre Itacoatiara",
+    "titulo": "Mar em Movimento",
     "autor": "Luciano Machado",
     "cidade": "Niterói, Brasil",
     "ano": "2026",
     "tamanho": "40x60 cm",
     "impressao": "Papel algodão",
-    "audio": "https://exemplo.com/audio2.mp3",
-    "descricao": "Cena ao entardecer."
+    "audio": "https://www.w3schools.com/html/horse.mp3",
+    "descricao": "Ondas capturadas com longa exposição.",
+    "imagem": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
   }
 ]
