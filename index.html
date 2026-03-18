@@ -38,7 +38,7 @@
 
         const container = document.getElementById('conteudo');
 
-        // 🎯 CASO 1: página individual
+        // 🎯 Página individual
         if (id) {
           const obra = data.find(o => o.id === id);
 
@@ -64,7 +64,7 @@
           return;
         }
 
-        // 🎯 CASO 2: sem ID → mostrar TODAS
+        // 🎯 Catálogo (sem ID)
         container.innerHTML = "<h1>Catálogo</h1>";
 
         data.forEach(obra => {
@@ -83,8 +83,6 @@
             <audio controls src="${obra.audio}"></audio>
 
             <p>${obra.descricao}</p>
-
-            <a href="?id=${obra.id}">Ver obra</a>
           `;
 
           container.appendChild(div);
