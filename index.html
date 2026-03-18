@@ -2,7 +2,27 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Obra</title>
+  <title>Obras</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .obra {
+      margin-bottom: 50px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+    }
+
+    h2 { margin-bottom: 5px; }
+    .autor { font-weight: bold; }
+    .info { color: #555; }
+    audio { width: 100%; margin-top: 10px; }
+  </style>
 </head>
 <body>
 
@@ -15,24 +35,61 @@
     fetch('data.json')
       .then(res => res.json())
       .then(data => {
-        const obra = data.find(o => o.id === id);
 
-        if (!obra) {
-          document.getElementById('conteudo').innerHTML = "Obra não encontrada";
+        const container = document.getElementById('conteudo');
+
+        // 🎯 CASO 1: página individual
+        if (id) {
+          const obra = data.find(o => o.id === id);
+
+          if (!obra) {
+            container.innerHTML = "Obra não encontrada";
+            return;
+          }
+
+          container.innerHTML = `
+            <h1>${obra.titulo}</h1>
+            <p class="autor">${obra.autor}</p>
+            <div class="info">
+              ${obra.cidade} - ${obra.ano}<br>
+              ${obra.tamanho}<br>
+              ${obra.impressao}
+            </div>
+
+            <audio controls src="${obra.audio}"></audio>
+
+            <p>${obra.descricao}</p>
+          `;
+
           return;
         }
 
-        document.getElementById('conteudo').innerHTML = `
-          <h1>${obra.titulo}</h1>
-          <p><strong>${obra.autor}</strong></p>
-          <p>${obra.cidade} - ${obra.ano}</p>
-          <p>${obra.tamanho}</p>
-          <p>${obra.impressao}</p>
+        // 🎯 CASO 2: sem ID → mostrar TODAS
+        container.innerHTML = "<h1>Catálogo</h1>";
 
-          <audio controls src="${obra.audio}"></audio>
+        data.forEach(obra => {
+          const div = document.createElement('div');
+          div.className = 'obra';
 
-          <p>${obra.descricao}</p>
-        `;
+          div.innerHTML = `
+            <h2>${obra.titulo}</h2>
+            <div class="autor">${obra.autor}</div>
+            <div class="info">
+              ${obra.cidade} - ${obra.ano}<br>
+              ${obra.tamanho}<br>
+              ${obra.impressao}
+            </div>
+
+            <audio controls src="${obra.audio}"></audio>
+
+            <p>${obra.descricao}</p>
+
+            <a href="?id=${obra.id}">Ver obra</a>
+          `;
+
+          container.appendChild(div);
+        });
+
       });
   </script>
 
