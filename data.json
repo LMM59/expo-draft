@@ -1,26 +1,26 @@
 [
   {
     "id": "obra-001",
-    "titulo": "Luz do Entardecer",
-    "autor": "Ramon Cotrim",
-    "cidade": "Rio de Janeiro, Brasil",
-    "ano": "2025",
-    "tamanho": "30x40 cm",
-    "impressao": "Fine art",
-    "audio": "https://www.w3schools.com/html/horse.mp3",
-    "descricao": "Fotografia com luz suave no final da tarde.",
-    "imagem": "https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+    "titulo": "Guerra do Kuwait Teste",
+    "autor": "Sebastião Salgado",
+    "cidade": "Cidade do Kuwait, Kuwait,",
+    "ano": 1991,
+    "tamanho": "90x120cm",
+    "impressao": "Impressão em teste",
+    "audio": "https://drive.google.com/uc?id=1J0I-ME1wa1b70sUzV-mssbtrDWh7wneP",
+    "descricao": "A fotografia em tons de cinza mostra uma cena externa com uma pessoa em primeiro plano e um grande incêndio ao fundo.\n\nNo lado esquerdo da imagem, um poderoso jato de água branca e pulverizada sai de fora do quadro, formando uma cascata de gotículas. Essa água atinge o chão escuro, molhando a superfície.\n\nNo centro-esquerda e no primeiro plano, uma figura humana é vista de costas, caminhando ligeiramente para a direita. A pessoa veste um macacão protetor de cor clara, possivelmente branco ou cinza-claro, e um capacete ou chapéu de aba de cor similar. A figura está parcialmente envolvida pela névoa da água.\n\nNo lado direito da imagem e ao fundo, uma enorme explosão ou incêndio emite chamas intensas de um branco brilhante e cinza claro na base. Acima das chamas, uma coluna densa de fumaça preta e cinza escura sobe verticalmente, expandindo-se em uma vasta nuvem em forma de cogumelo que preenche grande parte do céu à direita.\n\nO chão é escuro e parece ser uma superfície industrial. O contraste entre a água clara no primeiro plano e a fumaça escura ao fundo é acentuado.",
+    "imagem": "https://lh3.googleusercontent.com/d/19ZySfgSYY898sphWt5z2tbJo760vhX1X"
   },
   {
     "id": "obra-002",
-    "titulo": "Mar em Movimento",
-    "autor": "Luciano Machado",
-    "cidade": "Niterói, Brasil",
-    "ano": "2026",
-    "tamanho": "40x60 cm",
-    "impressao": "Papel algodão",
-    "audio": "https://www.w3schools.com/html/horse.mp3",
-    "descricao": "Ondas capturadas com longa exposição.",
-    "imagem": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+    "titulo": "Arbus Teste",
+    "autor": "Diane Arbus",
+    "cidade": "Paris, França,",
+    "ano": 1960,
+    "tamanho": "30x40cm",
+    "impressao": "Impressão em teste 2\n\n",
+    "audio": "https://drive.google.com/uc?id=1VdNVBbktfp9xG-mzLEdWjn8PQ7cSha6F",
+    "descricao": "A imagem em preto e branco mostra o retrato de um homem, sentado, de frente para a câmera. Ele ocupa o centro da fotografia, da cintura para cima.\n\nO homem tem o torso nu e está extensivamente tatuado. Seus braços, ombros e peito são cobertos por tatuagens com padrões intrincados. Ele tem os braços cruzados na altura dos pulsos, com a mão direita sobre a esquerda, e os antebraços repousam sobre uma mesa redonda de cor clara.\n\nSeu rosto é arredondado, com cabelo escuro penteado para cima no topo e mais curto nas laterais. Seus olhos escuros olham diretamente para frente. Há marcas escuras e pequenas manchas visíveis em sua testa, bochechas e ao redor dos olhos.\n\nSobre a mesa, no primeiro plano, estão alguns objetos: à esquerda, uma pequena caixa retangular; ao centro, um cinzeiro de vidro transparente com algumas bitucas de cigarro; e à direita, um copo com um líquido escuro.\n\nO fundo da imagem é uma parede escura e lisa, com uma moldura horizontal visível na altura dos ombros do homem. A iluminação principal vem de cima e da frente, destacando o rosto, o cabelo e os ombros do homem.",
+    "imagem": "https://lh3.googleusercontent.com/d/1J8lf0oHMMNKOKpKTnQat8ysGE-VvRzzu"
   }
 ]
