@@ -26,10 +26,25 @@
       border-radius: 8px;
     }
 
-    h2 { margin-bottom: 5px; }
+    h1, h2 { margin-bottom: 5px; }
     .autor { font-weight: bold; }
-    .info { color: #555; }
-    audio { width: 100%; margin-top: 10px; }
+    .info { color: #555; margin-bottom: 10px; }
+
+    audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .voltar {
+      display: inline-block;
+      margin-bottom: 20px;
+      cursor: pointer;
+      color: #007BFF;
+    }
+
+    .voltar:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -39,6 +54,17 @@
   <script>
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
+
+    // 🔧 helper: evita quebrar UI com campos vazios
+    function safe(value, fallback = '') {
+      return value ? value : fallback;
+    }
+
+    // 🔧 helper: só mostra áudio se existir
+    function renderAudio(audioUrl) {
+      if (!audioUrl) return '';
+      return `<audio controls src="${audioUrl}"></audio>`;
+    }
 
     fetch('data.json')
       .then(res => res.json())
@@ -56,18 +82,23 @@
           }
 
           container.innerHTML = `
-            <img src="${obra.imagem}" alt="${obra.titulo}">
-            <h1>${obra.titulo}</h1>
-            <p class="autor">${obra.autor}</p>
+            <div class="voltar" onclick="window.location.href='index.html'">← Voltar</div>
+
+            <img src="${safe(obra.imagem)}" alt="${safe(obra.titulo)}">
+
+            <h1>${safe(obra.titulo, 'Sem título')}</h1>
+
+            <p class="autor">${safe(obra.autor)}</p>
+
             <div class="info">
-              ${obra.cidade} - ${obra.ano}<br>
-              ${obra.tamanho}<br>
-              ${obra.impressao}
+              ${safe(obra.cidade)} ${obra.cidade && obra.ano ? '-' : ''} ${safe(obra.ano)}<br>
+              ${safe(obra.tamanho)}<br>
+              ${safe(obra.impressao)}
             </div>
 
-            <audio controls src="${obra.audio}"></audio>
+            ${renderAudio(obra.audio)}
 
-            <p>${obra.descricao}</p>
+            <p>${safe(obra.descricao)}</p>
           `;
 
           return;
@@ -81,23 +112,32 @@
           div.className = 'obra';
 
           div.innerHTML = `
-            <img src="${obra.imagem}" alt="${obra.titulo}">
-            <h2>${obra.titulo}</h2>
-            <div class="autor">${obra.autor}</div>
+            <a href="?id=${obra.id}">
+              <img src="${safe(obra.imagem)}" alt="${safe(obra.titulo)}">
+            </a>
+
+            <h2>${safe(obra.titulo, 'Sem título')}</h2>
+
+            <div class="autor">${safe(obra.autor)}</div>
+
             <div class="info">
-              ${obra.cidade} - ${obra.ano}<br>
-              ${obra.tamanho}<br>
-              ${obra.impressao}
+              ${safe(obra.cidade)} ${obra.cidade && obra.ano ? '-' : ''} ${safe(obra.ano)}<br>
+              ${safe(obra.tamanho)}<br>
+              ${safe(obra.impressao)}
             </div>
 
-            <audio controls src="${obra.audio}"></audio>
+            ${renderAudio(obra.audio)}
 
-            <p>${obra.descricao}</p>
+            <p>${safe(obra.descricao)}</p>
           `;
 
           container.appendChild(div);
         });
 
+      })
+      .catch(err => {
+        document.getElementById('conteudo').innerHTML = "Erro ao carregar dados";
+        console.error(err);
       });
   </script>
 
